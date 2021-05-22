@@ -2,7 +2,6 @@ import React from 'react'
 import { observer } from 'mobx-react'
 import UserStore from './stores/UserStore'
 import LoginForm from './LoginForm'
-import InputField from './InputField'
 import SubmitButton from './SubmitButton'
 import './App.css';
 
@@ -98,6 +97,11 @@ class App extends React.Component {
     return (
       <div className="app">
         <div className="container">
+          <SubmitButton 
+            text={'Log out'}
+            disabled={false}
+            onClick={ () => this.doLogout() }
+          />
           <LoginForm />
         </div>
       </div>
